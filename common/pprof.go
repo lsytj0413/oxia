@@ -80,7 +80,7 @@ func RunProfiling() io.Closer {
 					slog.Any("error", err),
 					slog.String("component", "pprof"),
 				)
-				os.Exit(1)
+				os.Exit(1) //nolint:revive
 			}
 		})
 

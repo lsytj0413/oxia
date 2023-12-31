@@ -127,7 +127,7 @@ func configMap(name string, status *model.ClusterStatus, version Version) *corev
 			"unable to marshal cluster status",
 			slog.Any("error", err),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 
 	cm := &corev1.ConfigMap{

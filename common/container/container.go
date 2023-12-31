@@ -94,7 +94,7 @@ func newDefaultGrpcProvider(name, bindAddress string, registerFunc func(grpc.Ser
 					"Failed to start serving",
 					slog.Any("error", err),
 				)
-				os.Exit(1)
+				os.Exit(1) //nolint:revive
 			}
 		},
 	)

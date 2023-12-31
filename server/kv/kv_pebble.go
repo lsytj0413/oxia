@@ -127,7 +127,7 @@ func (p *PebbleFactory) getKVPath(namespace string, shard int64) string {
 			"Missing namespace when getting KV path",
 			slog.Int64("shard", shard),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 
 	return filepath.Join(p.dataDir, namespace, fmt.Sprint("shard-", shard))

@@ -27,7 +27,7 @@ func RunProcess(startProcess func() (io.Closer, error)) {
 			"Failed to start the process",
 			slog.Any("error", err),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 
 	profiler := RunProfiling()

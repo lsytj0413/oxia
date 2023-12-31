@@ -122,7 +122,7 @@ func Start(bindAddress string) (*PrometheusMetrics, error) {
 					"Failed to serve metrics",
 					slog.Any("error", err),
 				)
-				os.Exit(1)
+				os.Exit(1) //nolint:revive
 			}
 		},
 	)

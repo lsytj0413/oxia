@@ -38,7 +38,7 @@ func fatalOnErr(err error, name string) {
 			"Failed to create metric",
 			slog.String("metric-name", name),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 }
 
@@ -63,7 +63,7 @@ func getAttrs(labels map[string]any) (options metric.MeasurementOption) {
 
 		default:
 			slog.Error(fmt.Sprintf("Invalid label type %#v", v))
-			os.Exit(1)
+			os.Exit(1) //nolint:revive
 		}
 
 		attrs = append(attrs, attr)

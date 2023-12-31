@@ -35,7 +35,7 @@ func NewK8SClientConfig() *rest.Config {
 			"failed to load kubeconfig",
 			slog.Any("error", err),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 	return config
 }
@@ -47,7 +47,7 @@ func NewK8SClientset(config *rest.Config) kubernetes.Interface {
 			"failed to create client",
 			slog.Any("error", err),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 	return clientset
 }

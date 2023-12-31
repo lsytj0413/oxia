@@ -51,7 +51,7 @@ func fatalOnErr(err error, name string) {
 			slog.String("component", "oxia-client"),
 			slog.String("MetricName", name),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 }
 

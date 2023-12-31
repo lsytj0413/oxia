@@ -41,5 +41,5 @@ func (pl *pebbleLogger) Fatalf(format string, args ...any) {
 	pl.zl.Warn(
 		fmt.Sprintf(format, args...),
 	)
-	os.Exit(1)
+	os.Exit(1) //nolint:revive
 }

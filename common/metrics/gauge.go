@@ -39,7 +39,7 @@ func (g *gauge) Unregister() {
 			"Failed to unregister gauge",
 			slog.Any("error", err),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 }
 
@@ -69,7 +69,7 @@ func NewGauge(name string, description string, unit Unit, labels map[string]any,
 			"Failed to register gauge",
 			slog.Any("error", err),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 	return res
 }

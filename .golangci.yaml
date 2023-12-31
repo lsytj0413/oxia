@@ -116,7 +116,7 @@ linters-settings:
         disabled: false
       - name: deep-exit
         severity: warning
-        disabled: true
+        disabled: false
       - name: max-public-structs
         severity: warning
         disabled: true
@@ -162,7 +162,7 @@ issues:
     - path: maelstrom/
       linters:
         - revive
-      text: "unchecked-type-assertion|unhandled-error|unused-receiver|unused-parameter|add-constant|cyclomatic|cognitive-complexity"
+      text: "unchecked-type-assertion|unhandled-error|unused-receiver|unused-parameter|add-constant|cyclomatic|cognitive-complexity|deep-exit"
     - path: _grpc\.go
       linters:
         - revive

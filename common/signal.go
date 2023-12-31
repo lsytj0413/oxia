@@ -39,12 +39,12 @@ func WaitUntilSignal(closers ...io.Closer) {
 				"Failed when shutting down server",
 				slog.Any("error", err),
 			)
-			os.Exit(1)
+			os.Exit(1) //nolint:revive
 		}
 	}
 
 	if code == 0 {
 		slog.Info("Shutdown Completed")
 	}
-	os.Exit(code)
+	os.Exit(code) //nolint:revive
 }

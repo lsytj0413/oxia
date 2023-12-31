@@ -81,7 +81,7 @@ func (p *perf) Run(ctx context.Context) {
 			"Failed to create Oxia client",
 			slog.Any("error", err),
 		)
-		os.Exit(1)
+		os.Exit(1) //nolint:revive
 	}
 
 	writeLatencyCh := make(chan int64)
